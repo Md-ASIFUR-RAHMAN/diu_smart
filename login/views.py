@@ -18,7 +18,7 @@ def Home(request):
         if name == 'ITQAN' and passw == 'ITQAN#9696' :
             return render(request, 'login/success.html')
         else:
-            return render(request, 'login/ayon.html')
+            return render(request, 'login/unsuccess.html')
 
 
 # def form(request):

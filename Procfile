@@ -1,0 +1,1 @@
+web: gunicorn diu_smart.wsgi --log-file -

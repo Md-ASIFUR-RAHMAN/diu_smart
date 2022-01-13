@@ -16,7 +16,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from login import views as loginpage
-from Halima import views as Dim
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',loginpage.Home),
