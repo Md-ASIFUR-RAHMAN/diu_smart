@@ -15,13 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from login import views as loginpage
+from login import views as smartitqan
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',loginpage.Home),
-    path('color/', loginpage.color),
-    path('Feedback/', loginpage.feedback),
-    path('feedbacklist/', loginpage.feedbacklist),
-    path('Dashboard/', loginpage.Dashboardd),
+    path('',smartitqan.Home),
+    path('color/', smartitqan.color),
+    path('Feedback/', smartitqan.feedback),
+    path('feedbacklist/', smartitqan.feedbacklist),
+    path('Dashboard/', smartitqan.Dashboardd),
+    path('index/', smartitqan.index),
+    path('filter/', smartitqan.filter),
 
 ]

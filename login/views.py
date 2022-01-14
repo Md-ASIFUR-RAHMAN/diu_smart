@@ -4,6 +4,8 @@ from django.http import HttpResponse
 from login.models import *
 import pandas as pd
 import matplotlib.pyplot as plt
+import datetime
+
 
 def Home(request):
     if request.method == "GET":
@@ -136,6 +138,29 @@ def Dashboardd(request):
 
 
     return render(request,'login/dashboard.html',context)
+
+def index(request):
+    if request.method == "GET":
+        return render(request, 'login/index.html')
+
+def filter(request):
+    if request.method == "GET":
+        return render(request, 'login/filter.html')
+
+
+    if request.method=="POST":
+        date = request.POST['bdate']
+        date2 = request.POST['bdate2']
+
+
+        info = performance_details.objects.filter(date__lte=date2,date__gte=date)
+
+        context = {
+            'information': info
+        }
+        return render(request, 'login/listoffeedback.html', context)
+
+
 
 
 def HL(request):

@@ -144,50 +144,19 @@
       <form method="post" >
           {% csrf_token %}
         <div class="banner">
-          <h1>EMPLOYE FEEDBACK</h1>
+          <h1>FIND YOUR DATA</h1>
         </div>
         <div class="item">
-          <label for="name">Name<span>*</span></label>
-          <div class="name-item">
-            <input id="name" type="text" name="name" placeholder="Nickname" required/>
-            <input id="namee" type="text" name="Position" placeholder="Position" required/>
-          </div>
-        </div>
-        <div class="item">
-          <label for="bdate">Date of work<span>*</span></label>
+          <label for="bdate">Start Date<span>*</span></label>
           <input id="bdate" type="date" name="bdate" required/>
           <i class="fas fa-calendar-alt"></i>
         </div>
         <div class="item">
-          <div class="name-item">
-            <div>
-              <label for="address">Availability<span>*</span></label>
-              <input id="address" type="number" name="Availability" required/>
-            </div>
-            <div>
-              <label for="number">Performance</label>
-              <input id="number" type="number" name="Performance" />
-            </div>
-          </div>
+          <label for="bdate">End Date<span>*</span></label>
+          <input id="bdate2" type="date" name="bdate2" required/>
+          <i class="fas fa-calendar-alt"></i>
         </div>
-        <div class="item">
-          <div class="name-item">
-            <div>
-              <label for="language">Task</label>
-              <input id="language" type="text" name="Task" />
-            </div>
-            <div>
-              <label for="nationality">Work activity</label>
-              <input id="nationality" type="text" name="Work_activity" />
-            </div>
-
-          </div>
-        </div>
-        <input type="submit" value="Add new">
-        <div style="text-align: center">
-        <button><a href="/feedbacklist/" class="btn-btn-warning" style="font-color: white">Feedback list</a></button>
-        <button><a href="/Dashboard/" class="btn-btn-success">Dashboard</a></button>
-        </div>
+        <input type="submit" value="Find">
 
 
 
